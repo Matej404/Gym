@@ -1,0 +1,30 @@
+.mobile-icon {
+    display: none;
+}
+
+.logo img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+    position: fixed;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-link {
+    margin-left: 2rem;
+    list-style: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
