@@ -57,9 +57,9 @@
     list-style: none;
     font-size: 1.3rem;
     font-weight: bold;
-    transition: all 0.2s ease-in;
+    transition: all 0.4s ease-in-out;
     &:hover {
-        color: rgb(148, 31, 31);
+        transform: scale(1.7, 1.7);
     }
     cursor: pointer;
     @media screen and (max-width: 786px) {
