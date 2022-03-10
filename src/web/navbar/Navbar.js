@@ -2,44 +2,67 @@ import "./navbar.css";
 import logo from "./logo.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
 
+    const [toggleMenu, setToggleMenu] = useState(false);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const handleToggleMenu = () => {
+        setToggleMenu(!toggleMenu);
+    }
+
+    useEffect(() => {
+        const changeWidth = () => {
+            setScreenWidth(window.innerWidth);
+        }
+
+        window.addEventListener("resize", changeWidth);
+
+        return () => {
+            window.removeEventListener("rsize", changeWidth);
+        }
+    }, [])
+
     return(
-        <div className="navbar">
-            <div className="logo">
-                <img src={logo} />
+        <div className={toggleMenu ? "navbar-toggle" : "navbar"}>
+            <div className="navbar-container">
+                <div className="logo">
+                    <img src={logo} />
+                </div>
+                <div className="mobile-icon" onClick={() => handleToggleMenu()}>
+                    <FaBars />
+                </div>
+                {(toggleMenu || screenWidth > 500) && (
+                <ol className="nav-menu">
+                    <li className="nav-link">
+                        <Link className="nav-link" to="home" smooth={true} duration={1000} >
+                            HOME
+                        </Link>
+                    </li>
+                    <li className="nav-link">
+                        <Link className="nav-link" to="features" smooth={true} duration={1000} >
+                            FEATURES
+                        </Link>
+                    </li>
+                    <li className="nav-link">
+                        <Link className="nav-link" to="offer" smooth={true} duration={1000} >
+                            OFFER
+                        </Link>
+                    </li>
+                    <li className="nav-link">
+                        <Link className="nav-link" to="about" smooth={true} duration={1000} >
+                            ABOUT
+                        </Link>
+                    </li>
+                    <li className="nav-link">
+                        <Link className="nav-link" to="contact" smooth={true} duration={1000} >
+                            CONTACT
+                        </Link>
+                    </li>
+                </ol>)}
             </div>
-            <div className="mobile-icon">
-                <FaBars />
-            </div>
-            <ol className="nav-menu">
-                <li className="nav-link">
-                    <Link className="nav-link" to="home" smooth={true} duration={1000} >
-                        HOME
-                    </Link>
-                </li>
-                <li className="nav-link">
-                    <Link className="nav-link" to="features" smooth={true} duration={1000} >
-                        FEATURES
-                    </Link>
-                </li>
-                <li className="nav-link">
-                    <Link className="nav-link" to="offer" smooth={true} duration={1000} >
-                        OFFER
-                    </Link>
-                </li>
-                <li className="nav-link">
-                    <Link className="nav-link" to="about" smooth={true} duration={1000} >
-                        ABOUT
-                    </Link>
-                </li>
-                <li className="nav-link">
-                    <Link className="nav-link" to="contact" smooth={true} duration={1000} >
-                        CONTACT
-                    </Link>
-                </li>
-            </ol>
         </div>
     )
 }

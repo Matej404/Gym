@@ -1,10 +1,23 @@
 .mobile-icon {
     display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    @media screen and (max-width: 786px) {
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+    }
 }
 
 .logo img {
     width: 90px;
     cursor: pointer;
+    @media screen and (max-width: 786px) {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
 }
 
 .navbar {
@@ -12,19 +25,44 @@
     min-height: 70px;
     position: fixed;
     background: transparent;
+}
+
+.navbar-toggle {
+    background-color: rgb(36, 33, 33);
+}
+
+.navbar-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     z-index: 10;
+    @media screen and (max-width: 786px) {
+        height: 100vh;
+        justify-content: center;
+    }
 }
 
 .nav-menu {
     display: flex;
+    @media screen and (max-width: 786px) {
+        display: grid;
+        grid-template-rows: repeat(5, 80px);
+        text-align: center;
+        margin-right: 3rem;
+    }
 }
 
 .nav-link {
     margin-left: 2rem;
     list-style: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+    &:hover {
+        color: rgb(148, 31, 31);
+    }
     cursor: pointer;
+    @media screen and (max-width: 786px) {
+        font-size: 1.5rem;
+    }
 }
