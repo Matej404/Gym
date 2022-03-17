@@ -13,6 +13,11 @@
     display: flex;
     justify-content: space-around;
     margin-top: 100px;
+    @media screen and (max-width: 786px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
 }
 
 .about-img {
@@ -21,8 +26,42 @@
         width: 100%;
         border-radius: 10px;
     }
+    @media screen and (max-width: 786px) {
+        width: 100%;
+    }
 }
 
 .about-content {
     width: 35%;
+    @media screen and (max-width: 786px) {
+        width: 100%;
+    }
+    p {
+        font-family: sans-serif;
+    }
+}
+
+.more-about-content {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 786px) {
+        flex-direction: column;
+        width: 200px;
+    }
+}
+
+.more-about {
+    background-color: rgb(172, 9, 9);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+        &:hover {
+        background-color: white;
+        color: rgb(172, 9, 9);
+    }
 }

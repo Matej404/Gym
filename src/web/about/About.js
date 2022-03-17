@@ -23,6 +23,10 @@ export default function About() {
                     and more recently with desktop publishing software like Aldus 
                     PageMaker including versions of Lorem Ipsum.
                     </p>
+                    <div className="more-about-content">
+                        <div className="more-about trainer">Meet your trainer</div>
+                        <div className="more-about gym">Wiev gym photos</div>
+                    </div>
                 </div>
             </div>
         </div>

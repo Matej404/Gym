@@ -37,27 +37,27 @@ export default function Navbar() {
                 {(toggleMenu || screenWidth > 500) && (
                 <ol className="nav-menu">
                     <li className="nav-link">
-                        <Link className="nav-link" to="home" smooth={true} duration={1000} >
+                        <Link className="nav-link" to="home" smooth={true} duration={1000} onClick={() => handleToggleMenu()} >
                             HOME
                         </Link>
                     </li>
                     <li className="nav-link">
-                        <Link className="nav-link" to="features" smooth={true} duration={1000} >
+                        <Link className="nav-link" to="features" smooth={true} duration={1000} onClick={() => handleToggleMenu()} >
                             FEATURES
                         </Link>
                     </li>
                     <li className="nav-link">
-                        <Link className="nav-link" to="offer" smooth={true} duration={1000} >
+                        <Link className="nav-link" to="offer" smooth={true} duration={1000} onClick={() => handleToggleMenu()} >
                             OFFER
                         </Link>
                     </li>
                     <li className="nav-link">
-                        <Link className="nav-link" to="about" smooth={true} duration={1000} >
+                        <Link className="nav-link" to="about" smooth={true} duration={1000} onClick={() => handleToggleMenu()} >
                             ABOUT
                         </Link>
                     </li>
                     <li className="nav-link">
-                        <Link className="nav-link" to="contact" smooth={true} duration={1000} >
+                        <Link className="nav-link" to="contact" smooth={true} duration={1000} onClick={() => handleToggleMenu()} >
                             CONTACT
                         </Link>
                     </li>
