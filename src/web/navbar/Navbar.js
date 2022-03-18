@@ -26,7 +26,7 @@ export default function Navbar() {
     }, [])
 
     return(
-        <div className={toggleMenu ? "navbar-toggle" : "navbar"}>
+        <div className="navbar">
             <div className="navbar-container">
                 <div className="logo">
                     <img src={logo} />

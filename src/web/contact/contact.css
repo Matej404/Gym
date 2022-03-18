@@ -1,0 +1,131 @@
+.contact {
+  margin-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact h1 {
+  font-size: 40px;
+}
+
+.contact-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 5rem;
+  margin-top: 100px;
+}
+
+.contact-informations-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-information {
+  background-color: #131212;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.contact-information p {
+  font-size: 1.2rem;
+}
+
+.icon {
+  color: white;
+  font-size: 40px;
+  background-color: #272626;
+  padding: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-grup {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-grup label {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.form-grup input {
+  background-color: #131212;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.form-grup textarea {
+  background-color: #131212;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-submit {
+  color: white;
+  background-color: #ac0909;
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.btn-submit:hover {
+  background-color: white;
+  color: #ac0909;
+}
+/*# sourceMappingURL=contact.css.map */
