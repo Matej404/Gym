@@ -2,8 +2,20 @@ import "./contact.css";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { ImLocation } from "react-icons/im";
+import { useState } from "react";
 
 export default function Contact() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const isTextareaDisabled = message.length === 0;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setName();
+        setEmail();
+        setMessage();
+    }
 
     return(
         <div className="contact">
@@ -30,20 +42,20 @@ export default function Contact() {
                     </div>
                 </div>
                     <div className="contact-form-container">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="form-grup">
                                 <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" />
+                                <input type="text" id="name" name="name" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
                             </div>
                             <div className="form-grup">
                                 <label>Your E-mail</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your E-mail" />
+                                <input type="email" id="email" name="email" placeholder="Enter your E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
                             </div>
                             <div className="form-grup">
                                 <label for="message">Your Message</label>
-                                <textarea id="message" name="message" rows="6" cols="30" placeholder="Enter Your message" />
+                                <textarea id="message" name="message" rows="6" cols="30" placeholder="Enter Your message" value={message} onChange={(e) => setMessage(e.target.value)} />
                             </div>
-                            <button type="submit" className="btn-submit">Submit</button>
+                            <button disabled={isTextareaDisabled} type="submit" className="btn-submit">Submit</button>
                         </form>
                     </div>
                 </div>
